@@ -1,0 +1,6 @@
+framework module Pods_One_Lab_5 {
+  umbrella header "Pods-One-Lab-5-umbrella.h"
+
+  export *
+  module * { export * }
+}
