@@ -90,7 +90,7 @@ class NewsDetailPage: UIViewController {
         dateLabel.text = newsData.date
         contentTextLabel.text = newsData.content
         if let urlString = newsData.urlToImage {
-            NewsServiceImpl.getMovieImage(urlString: urlString) {[weak self] result in
+            NewsServiceImpl.getImageFrom(urlString: urlString) {[weak self] result in
                 switch result {
                 case .success( let image):
                     print("success")

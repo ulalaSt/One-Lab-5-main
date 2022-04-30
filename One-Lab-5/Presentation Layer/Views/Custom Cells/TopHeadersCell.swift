@@ -91,11 +91,13 @@ extension TopHeadersCell: ConfigurableCell {
     typealias DataType = TopNewsHeader
     
     func configure(data: TopNewsHeader) {
+        
         authorLabel.text = data.author
         titleLabel.text = data.title
         descriptionLabel.text = data.description
+        
         if let urlString = data.urlToImage {
-            NewsServiceImpl.getMovieImage(urlString: urlString) {[weak self] result in
+            NewsServiceImpl.getImageFrom(urlString: urlString) {[weak self] result in
                 switch result {
                 case .success( let image):
                     print("success passed 000")
